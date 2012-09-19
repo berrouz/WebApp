@@ -1,10 +1,8 @@
 package com.shevchik.controllers;
-
+import com.shevchik.service.ContactServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-
 import java.util.Map;
 
 /**
@@ -16,9 +14,12 @@ import java.util.Map;
  */
 @Controller
 public class HomeController {
+    @Autowired
+    private ContactServiceImpl contactService;
 
     @RequestMapping(value = "/list" )
     public String index(Map<String, Object> map){
+        map.put("contactList", contactService.getAll());
         return "list";
     }
 }

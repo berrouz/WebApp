@@ -37,6 +37,17 @@
           <artifactId>spring-orm</artifactId>
           <version>3.1.2.RELEASE</version>
       </dependency>
+      <dependency>
+          <groupId>org.hibernate</groupId>
+          <artifactId>hibernate-entitymanager</artifactId>
+          <version>3.6.0.Final</version>
+      </dependency>
+      <dependency>
+          <groupId>com.h2database</groupId>
+          <artifactId>h2</artifactId>
+          <version>1.0.20061217</version>
+      </dependency>
+
 
   </dependencies>
 
